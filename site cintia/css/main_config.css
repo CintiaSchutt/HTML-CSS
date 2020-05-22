@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    background-color:  #94618E;
+    background-size: auto 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 100vh;    
+}
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    align-items: center;
+    display: flex;
+    height: 100vh;    
+    justify-content: center;    
+}
+
+.menu {
+    background-color: #F8EEE7;
+    font-weight: 700;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: #94618E;
+    color: #F8EEE7;
+}
+
+a {
+    color: #94618E;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.title {
+    animation: linear 2s titleAnimation forwards;
+    opacity: 0;
+    transform: scale(0.2) translateY(50vh);
+}
+
+@keyframes titleAnimation {
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.site-subtitle,
+.site-title {
+    color: #F8EEE7;     
+    text-align: center;
+}
+
+.site-subtitle {
+    color:#49274A;  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;  
+    line-height: 1.8em;    
+}
+
+.site-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 4em;    
+}
+
+.about,
+.contact,
+.portfolio {     
+    min-height: 100vh;
+    padding: 2em;    
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto; 
+        max-width: 1200px;          
+    }
+}
+
+.about h2,
+.contact h2,
+.portfolio h2 {
+    color:#49274A;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2em;
+    margin-bottom: 1.5em;   
+}
+
+.about p {
+    color:#F4DECB;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 1.4em;
+}
+
+.about .avatar {    
+    clip-path: polygon(50% 25%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-left: 2em; 
+}
+
+.about .avatar img {
+    border-radius: 10%;    
+    height: 400px;
+    width: 400px;
+}
+
+@media (min-width: 600px) {
+    .about .avatar {        
+        clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+        float: right;   
+    }
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;    
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {        
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {     
+        align-content: center;   
+        grid-template-columns: repeat(3, 260px);
+        height: calc(100vh - 4em - 49px - 3em);
+        justify-content: center;
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    border-radius: 10%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 500ms;    
+    width: 100%;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2);   
+}
+
+@media (min-width: 1200px) {
+    .img-portfolio {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.contact a {
+    color:  #49274A;
+    font-size: 3em;
+    transition: text-shadow 1s;
+}
+
+.contact a:active,
+.contact a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #F8EEE7;
+}
+
+.contact .icons {
+    text-align: center;
+}
